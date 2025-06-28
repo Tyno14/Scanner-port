@@ -1,10 +1,10 @@
-# Port Scanner GUI
+# Scanner port
 
 ![Python Version](https://img.shields.io/badge/python-3.x-brightgreen.svg)
 ![GUI Framework](https://img.shields.io/badge/GUI-CustomTkinter-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-Un outil de scan de ports doté d'une interface utilisateur graphique. Ce projet permet aux utilisateurs de scanner des adresses IP et des plages de ports pour identifier les ports ouverts et applicaations lié de manière efficace.
+Un outil de scan de ports doté d'une interface graphique. Ce projet permet aux utilisateurs de scanner des adresses IP et des plages de ports pour identifier les ports ouverts et applicaations lié de manière efficace.
 
 ## Fonctionnalités
 
