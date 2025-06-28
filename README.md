@@ -8,9 +8,9 @@ Un outil de scan de ports doté d'une interface graphique. Ce projet permet aux 
 
 ## Fonctionnalités
 
-* **Scan de Ports TCP :** Capacité à détecter les ports TCP ouverts sur une adresse IP cible.
+* **Scan de Ports TCP et UDP:** Capacité à détecter les ports TCP et UDP ouverts sur une adresse IP cible.
 * **Scan de Plage de Ports :** Permet de spécifier une plage de ports à scanner pour une analyse plus approfondie.
-* **Affichage Clair des Résultats :** Présentation lisible des ports ouverts, dès application lié et de leur état.
+* **Affichage Clair des Résultats :** Présentation lisible des ports ouverts, des services lié et de leur état.
 
 ## Structure du Projet
 
@@ -33,8 +33,6 @@ Suivez ces étapes pour configurer et exécuter le projet sur votre machine loca
     git clone https://github.com/Tyno14/Scanner-port.git
     cd port-scanner-gui
     ```
-
-    *(N'oubliez pas de remplacer `Tyno14` par votre nom d'utilisateur GitHub réel si vous avez forké le projet.)*
 
 2. **Créez un environnement virtuel (recommandé) :**
 
