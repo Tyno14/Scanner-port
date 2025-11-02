@@ -1,7 +1,7 @@
 ---
 title: "Scanner de Ports - Outil de Reconnaissance Réseau"
 description: "Scanner de ports réseau avec interface graphique moderne. Implémente des scans TCP/UDP avec détection de services."
-date: "2025-02-11"
+date: "2025-11-02T01:14:22Z"
 tags: ["security", "python", "network", "cybersecurity"]
 lang: "fr"
 featured: true
@@ -51,6 +51,10 @@ diagrams:
 # URLs et liens
 demo_url: ""
 demo_label: ""
+github_repo: "Tyno14/Scanner-port"
+github_url: "https://github.com/Tyno14/Scanner-port"
+github_stars: 0
+github_language: "Python"
 ---
 
 ## 🎯 Contexte et Objectifs
@@ -398,17 +402,136 @@ python3 scanner.py
 - 🎯 **Presets** : Profils de scan pré-configurés (Quick, Deep, Stealth)
 - 🔐 **Authentification** : Test de connexion aux services détectés
 
-## 📖 Ressources
+## � Ressources & Documentation
 
-- [Documentation Python Socket](https://docs.python.org/3/library/socket.html)
-- [CustomTkinter GitHub](https://github.com/TomSchimansky/CustomTkinter)
-- [Nmap Reference Guide](https://nmap.org/book/man.html)
-- [HackTheBox](https://www.hackthebox.com/) - Plateforme légale de pentesting
-- [TryHackMe](https://tryhackme.com/) - Apprentissage cybersécurité
+<div class="documentation-grid grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+  
+  <div class="doc-card dark:bg-gradient-to-br dark:from-slate-900/50 dark:to-slate-800/50 bg-gradient-to-br from-slate-50 to-slate-100 border dark:border-white/10 border-slate-300 rounded-2xl p-6 hover:scale-[1.02] transition-all duration-300 cursor-pointer" data-doc-type="details">
+    <div class="flex items-center gap-3 mb-4">
+      <span class="text-3xl">📖</span>
+      <h3 class="text-lg font-bold dark:text-white text-slate-900">Documentation complète</h3>
+    </div>
+    <ul class="space-y-3">
+      <li class="flex items-start gap-2">
+        <span class="text-blue-500">▸</span>
+        <span class="dark:text-white/70 text-slate-600">Guide d'installation détaillé</span>
+      </li>
+      <li class="flex items-start gap-2">
+        <span class="text-blue-500">▸</span>
+        <span class="dark:text-white/70 text-slate-600">Utilisation pas à pas de l'interface</span>
+      </li>
+      <li class="flex items-start gap-2">
+        <span class="text-blue-500">▸</span>
+        <span class="dark:text-white/70 text-slate-600">Exemples de scan et cas d'usage</span>
+      </li>
+      <li class="flex items-start gap-2">
+        <span class="text-blue-500">▸</span>
+        <span class="dark:text-white/70 text-slate-600">Guide d'éthique et bonnes pratiques</span>
+      </li>
+    </ul>
+    <div class="mt-4 text-center">
+      <span class="text-sm dark:text-blue-400 text-blue-600 font-semibold">→ Voir les détails techniques</span>
+    </div>
+  </div>
+
+  <div class="doc-card dark:bg-gradient-to-br dark:from-purple-900/30 dark:to-indigo-900/30 bg-gradient-to-br from-purple-50 to-indigo-50 border dark:border-purple-500/30 border-purple-300 rounded-2xl p-6 hover:scale-[1.02] transition-all duration-300 cursor-pointer" data-doc-type="architecture">
+    <div class="flex items-center gap-3 mb-4">
+      <span class="text-3xl">🗺️</span>
+      <h3 class="text-lg font-bold dark:text-white text-slate-900">Diagramme interactif</h3>
+    </div>
+    <p class="dark:text-white/70 text-slate-600 mb-4">Visualisation complète de l'architecture avec détails pour chaque composant du scanner.</p>
+    <div class="flex flex-wrap gap-2 mb-4">
+      <span class="px-3 py-1 dark:bg-blue-500/20 bg-blue-200 dark:text-blue-300 text-blue-700 rounded-full text-xs">Interface</span>
+      <span class="px-3 py-1 dark:bg-purple-500/20 bg-purple-200 dark:text-purple-300 text-purple-700 rounded-full text-xs">Moteur</span>
+      <span class="px-3 py-1 dark:bg-green-500/20 bg-green-200 dark:text-green-300 text-green-700 rounded-full text-xs">TCP/UDP</span>
+      <span class="px-3 py-1 dark:bg-orange-500/20 bg-orange-200 dark:text-orange-300 text-orange-700 rounded-full text-xs">Visualisation</span>
+    </div>
+    <div class="text-center">
+      <span class="text-sm dark:text-purple-400 text-purple-600 font-semibold">→ Voir l'architecture</span>
+    </div>
+  </div>
+
+</div>
+
+### 📚 Ressources Externes
+
+<div class="resources-grid grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+  <a href="https://docs.python.org/3/library/socket.html" target="_blank" class="resource-link p-4 rounded-lg dark:bg-white/5 bg-white border dark:border-white/10 border-slate-200 hover:scale-[1.02] transition-all duration-300 hover:shadow-lg">
+    <div class="flex items-center gap-3">
+      <span class="text-2xl">📘</span>
+      <div>
+        <h4 class="font-semibold dark:text-white text-slate-900">Python Socket Docs</h4>
+        <p class="text-xs dark:text-white/60 text-slate-600">Documentation officielle des sockets</p>
+      </div>
+    </div>
+  </a>
+  
+  <a href="https://github.com/TomSchimansky/CustomTkinter" target="_blank" class="resource-link p-4 rounded-lg dark:bg-white/5 bg-white border dark:border-white/10 border-slate-200 hover:scale-[1.02] transition-all duration-300 hover:shadow-lg">
+    <div class="flex items-center gap-3">
+      <span class="text-2xl">🎨</span>
+      <div>
+        <h4 class="font-semibold dark:text-white text-slate-900">CustomTkinter</h4>
+        <p class="text-xs dark:text-white/60 text-slate-600">Framework GUI moderne pour Python</p>
+      </div>
+    </div>
+  </a>
+  
+  <a href="https://nmap.org/book/man.html" target="_blank" class="resource-link p-4 rounded-lg dark:bg-white/5 bg-white border dark:border-white/10 border-slate-200 hover:scale-[1.02] transition-all duration-300 hover:shadow-lg">
+    <div class="flex items-center gap-3">
+      <span class="text-2xl">🔍</span>
+      <div>
+        <h4 class="font-semibold dark:text-white text-slate-900">Nmap Reference</h4>
+        <p class="text-xs dark:text-white/60 text-slate-600">Guide de référence du scanner professionnel</p>
+      </div>
+    </div>
+  </a>
+  
+  <a href="https://www.hackthebox.com/" target="_blank" class="resource-link p-4 rounded-lg dark:bg-white/5 bg-white border dark:border-white/10 border-slate-200 hover:scale-[1.02] transition-all duration-300 hover:shadow-lg">
+    <div class="flex items-center gap-3">
+      <span class="text-2xl">🎯</span>
+      <div>
+        <h4 class="font-semibold dark:text-white text-slate-900">HackTheBox</h4>
+        <p class="text-xs dark:text-white/60 text-slate-600">Plateforme légale de pentesting</p>
+      </div>
+    </div>
+  </a>
+  
+  <a href="https://tryhackme.com/" target="_blank" class="resource-link p-4 rounded-lg dark:bg-white/5 bg-white border dark:border-white/10 border-slate-200 hover:scale-[1.02] transition-all duration-300 hover:shadow-lg">
+    <div class="flex items-center gap-3">
+      <span class="text-2xl">🛡️</span>
+      <div>
+        <h4 class="font-semibold dark:text-white text-slate-900">TryHackMe</h4>
+        <p class="text-xs dark:text-white/60 text-slate-600">Apprentissage cybersécurité interactif</p>
+      </div>
+    </div>
+  </a>
+  
+  <a href="https://www.pentesterlab.com/" target="_blank" class="resource-link p-4 rounded-lg dark:bg-white/5 bg-white border dark:border-white/10 border-slate-200 hover:scale-[1.02] transition-all duration-300 hover:shadow-lg">
+    <div class="flex items-center gap-3">
+      <span class="text-2xl">💻</span>
+      <div>
+        <h4 class="font-semibold dark:text-white text-slate-900">PentesterLab</h4>
+        <p class="text-xs dark:text-white/60 text-slate-600">Exercices pratiques de pentest</p>
+      </div>
+    </div>
+  </a>
+</div>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function() {
+    const docCards = document.querySelectorAll('[data-doc-type]');
+    docCards.forEach(card => {
+      card.addEventListener('click', function() {
+        const type = this.getAttribute('data-doc-type');
+        const tabButton = document.querySelector(`[data-tab="${type}"]`);
+        if (tabButton) {
+          tabButton.click();
+        }
+      });
+    });
+  });
+</script>
 
 ---
 
-<div class="text-center my-8 text-sm dark:text-white/60 text-slate-500">
-  <p>Projet éducatif - Formation Cybersécurité 2025</p>
-  <p class="mt-2">⚠️ Utilisation responsable uniquement</p>
-</div>
+**Projet éducatif** | **Formation Cybersécurité 2025** | **⚠️ Utilisation responsable uniquement**
