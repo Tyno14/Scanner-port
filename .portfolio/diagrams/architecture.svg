@@ -1,0 +1,182 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 750" style="background: transparent;">
+  <defs>
+    <!-- Arrow markers -->
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="currentColor" />
+    </marker>
+    
+    <!-- Gradients for depth -->
+    <linearGradient id="uiGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4F46E5;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#4F46E5;stop-opacity:0.1" />
+    </linearGradient>
+    
+    <linearGradient id="engineGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:0.1" />
+    </linearGradient>
+    
+    <linearGradient id="tcpGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#10B981;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#10B981;stop-opacity:0.1" />
+    </linearGradient>
+    
+    <linearGradient id="udpGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#06B6D4;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:0.1" />
+    </linearGradient>
+    
+    <linearGradient id="vizGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F59E0B;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#F59E0B;stop-opacity:0.1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Title -->
+  <text x="450" y="30" text-anchor="middle" fill="currentColor" font-size="20" font-weight="bold" opacity="0.9">
+    Architecture du Scanner de Ports
+  </text>
+  
+  <!-- ========== INTERFACE GRAPHIQUE ========== -->
+  <g id="interface">
+    <!-- Shadow -->
+    <rect x="250" y="72" width="400" height="120" rx="12" fill="black" opacity="0.1"/>
+    
+    <!-- Main box -->
+    <rect x="250" y="70" width="400" height="120" rx="12" fill="url(#uiGrad)" stroke="#4F46E5" stroke-width="3"/>
+    
+    <!-- Icon -->
+    <circle cx="290" cy="110" r="20" fill="#4F46E5" opacity="0.3"/>
+    <text x="290" y="118" text-anchor="middle" font-size="24">🎨</text>
+    
+    <!-- Title -->
+    <text x="325" y="105" fill="currentColor" font-size="18" font-weight="bold">Interface Graphique</text>
+    <text x="325" y="125" fill="currentColor" font-size="13" opacity="0.7">(CustomTkinter)</text>
+    
+    <!-- Details -->
+    <text x="325" y="150" fill="currentColor" font-size="11" opacity="0.6">• Saisie IP/URL</text>
+    <text x="325" y="165" fill="currentColor" font-size="11" opacity="0.6">• Sélection plage de ports</text>
+    <text x="325" y="180" fill="currentColor" font-size="11" opacity="0.6">• Contrôles de scan</text>
+  </g>
+  
+  <!-- Arrow down -->
+  <line x1="450" y1="190" x2="450" y2="240" stroke="currentColor" stroke-width="3" marker-end="url(#arrowhead)" opacity="0.7"/>
+  <text x="465" y="220" fill="currentColor" font-size="10" opacity="0.5">événements</text>
+  
+  <!-- ========== MOTEUR DE SCAN ========== -->
+  <g id="engine">
+    <!-- Shadow -->
+    <rect x="250" y="242" width="400" height="120" rx="12" fill="black" opacity="0.1"/>
+    
+    <!-- Main box -->
+    <rect x="250" y="240" width="400" height="120" rx="12" fill="url(#engineGrad)" stroke="#8B5CF6" stroke-width="3"/>
+    
+    <!-- Icon -->
+    <circle cx="290" cy="280" r="20" fill="#8B5CF6" opacity="0.3"/>
+    <text x="290" y="288" text-anchor="middle" font-size="24">⚙️</text>
+    
+    <!-- Title -->
+    <text x="325" y="275" fill="currentColor" font-size="18" font-weight="bold">Moteur de Scan</text>
+    
+    <!-- Details -->
+    <text x="325" y="305" fill="currentColor" font-size="11" opacity="0.6">• Thread principal</text>
+    <text x="325" y="320" fill="currentColor" font-size="11" opacity="0.6">• Gestion timeouts</text>
+    <text x="325" y="335" fill="currentColor" font-size="11" opacity="0.6">• File d'attente résultats</text>
+  </g>
+  
+  <!-- Split arrow -->
+  <line x1="450" y1="360" x2="450" y2="400" stroke="currentColor" stroke-width="3" opacity="0.7"/>
+  <circle cx="450" cy="400" r="5" fill="currentColor" opacity="0.7"/>
+  
+  <!-- Left arrow to TCP -->
+  <line x1="450" y1="400" x2="250" y2="450" stroke="currentColor" stroke-width="3" marker-end="url(#arrowhead)" opacity="0.7"/>
+  <text x="320" y="420" fill="currentColor" font-size="10" opacity="0.5">TCP</text>
+  
+  <!-- Right arrow to UDP -->
+  <line x1="450" y1="400" x2="650" y2="450" stroke="currentColor" stroke-width="3" marker-end="url(#arrowhead)" opacity="0.7"/>
+  <text x="570" y="420" fill="currentColor" font-size="10" opacity="0.5">UDP</text>
+  
+  <!-- ========== TCP SCANNER ========== -->
+  <g id="tcp">
+    <!-- Shadow -->
+    <rect x="52" y="452" width="270" height="140" rx="12" fill="black" opacity="0.1"/>
+    
+    <!-- Main box -->
+    <rect x="50" y="450" width="270" height="140" rx="12" fill="url(#tcpGrad)" stroke="#10B981" stroke-width="3"/>
+    
+    <!-- Icon -->
+    <circle cx="90" cy="495" r="20" fill="#10B981" opacity="0.3"/>
+    <text x="90" y="503" text-anchor="middle" font-size="24">✅</text>
+    
+    <!-- Title -->
+    <text x="125" y="490" fill="currentColor" font-size="18" font-weight="bold">Scan TCP</text>
+    
+    <!-- Details -->
+    <text x="125" y="515" fill="currentColor" font-size="11" opacity="0.6">• Connect</text>
+    <text x="125" y="535" fill="currentColor" font-size="11" opacity="0.6">• Banner grabbing</text>
+    <text x="125" y="555" fill="currentColor" font-size="11" opacity="0.6">• Détection services</text>
+    
+    <!-- Sub-details -->
+    <rect x="60" y="565" width="250" height="18" rx="4" fill="currentColor" opacity="0.05"/>
+    <text x="70" y="577" fill="currentColor" font-size="9" opacity="0.5">Three-way handshake (SYN→SYN/ACK→ACK)</text>
+  </g>
+  
+  <!-- ========== UDP SCANNER ========== -->
+  <g id="udp">
+    <!-- Shadow -->
+    <rect x="582" y="452" width="270" height="140" rx="12" fill="black" opacity="0.1"/>
+    
+    <!-- Main box -->
+    <rect x="580" y="450" width="270" height="140" rx="12" fill="url(#udpGrad)" stroke="#06B6D4" stroke-width="3"/>
+    
+    <!-- Icon -->
+    <circle cx="620" cy="495" r="20" fill="#06B6D4" opacity="0.3"/>
+    <text x="620" y="503" text-anchor="middle" font-size="24">📡</text>
+    
+    <!-- Title -->
+    <text x="655" y="490" fill="currentColor" font-size="18" font-weight="bold">Scan UDP</text>
+    
+    <!-- Details -->
+    <text x="655" y="515" fill="currentColor" font-size="11" opacity="0.6">• Datagram</text>
+    <text x="655" y="535" fill="currentColor" font-size="11" opacity="0.6">• Timeout detection</text>
+    <text x="655" y="555" fill="currentColor" font-size="11" opacity="0.6">• Ports ouverts/filtrés</text>
+    
+    <!-- Sub-details -->
+    <rect x="590" y="565" width="250" height="18" rx="4" fill="currentColor" opacity="0.05"/>
+    <text x="600" y="577" fill="currentColor" font-size="9" opacity="0.5">Envoi datagrammes + détection ICMP</text>
+  </g>
+  
+  <!-- Merge arrows -->
+  <line x1="185" y1="590" x2="450" y2="640" stroke="currentColor" stroke-width="3" marker-end="url(#arrowhead)" opacity="0.7"/>
+  <text x="280" y="620" fill="currentColor" font-size="10" opacity="0.5">résultats</text>
+  
+  <line x1="715" y1="590" x2="450" y2="640" stroke="currentColor" stroke-width="3" marker-end="url(#arrowhead)" opacity="0.7"/>
+  <text x="610" y="620" fill="currentColor" font-size="10" opacity="0.5">résultats</text>
+  
+  <!-- ========== VISUALISATION & EXPORT ========== -->
+  <g id="visualization">
+    <!-- Shadow -->
+    <rect x="222" y="642" width="456" height="80" rx="12" fill="black" opacity="0.1"/>
+    
+    <!-- Main box -->
+    <rect x="220" y="640" width="456" height="80" rx="12" fill="url(#vizGrad)" stroke="#F59E0B" stroke-width="3"/>
+    
+    <!-- Icon -->
+    <circle cx="260" cy="680" r="20" fill="#F59E0B" opacity="0.3"/>
+    <text x="260" y="688" text-anchor="middle" font-size="24">📊</text>
+    
+    <!-- Title -->
+    <text x="295" y="675" fill="currentColor" font-size="18" font-weight="bold">Visualisation & Export</text>
+    
+    <!-- Details in grid -->
+    <text x="295" y="700" fill="currentColor" font-size="11" opacity="0.6">• Tableau CTkTable</text>
+    <text x="435" y="700" fill="currentColor" font-size="11" opacity="0.6">• Graphiques Matplotlib</text>
+    <text x="590" y="700" fill="currentColor" font-size="11" opacity="0.6">• Export JSON/CSV</text>
+  </g>
+  
+  <!-- Legend -->
+  <rect x="30" y="730" width="840" height="1" fill="currentColor" opacity="0.2"/>
+  <text x="450" y="745" text-anchor="middle" fill="currentColor" font-size="10" opacity="0.4">
+    Scanner de Ports Python - Architecture Complète
+  </text>
+</svg>
